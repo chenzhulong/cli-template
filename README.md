@@ -1,4 +1,4 @@
-# my-template
+# project
 
 ## Project setup
 ```
