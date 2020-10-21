@@ -1,3 +1,5 @@
+const WebpackZipPlugin = require('webpack-zip-plugin')
+
 module.exports = {
     devServer: {
         port: 8888,
@@ -15,5 +17,13 @@ module.exports = {
                 res.json({ custom: "response" })
             })
         }
+    },
+    configureWebpack: {
+        plugins: [
+            new WebpackZipPlugin({
+            initialFile: './dist', // 需要打包的文件夹(一般为dist)
+            endPath: './archive', // 打包到对应目录（一般为当前目录'./'）
+            zipName: 'master.zip' // 打包生成的文件名
+        })]
     }
 }

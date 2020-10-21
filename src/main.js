@@ -5,6 +5,10 @@ import store from "./store"
 import element from "element-ui"
 import "element-ui/lib/theme-chalk/index.css"
 
+import { haha } from 'cli-template'
+
+haha()
+
 Vue.config.productionTip = false
 Vue.use(element)
 
